@@ -54,7 +54,7 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 # --- 2. API 연결 ---
-genai.configure(api_key="AIzaSyCdfCaW_5i1SJ3voHnVM3IWxSnkOSQtZ7M") 
+genai.configure(api_key=st.secrets["YOUR_GEMINI_API_KEY"]) 
 model = genai.GenerativeModel('gemini-2.0-flash')
 
 if "messages" not in st.session_state: st.session_state.messages = []
